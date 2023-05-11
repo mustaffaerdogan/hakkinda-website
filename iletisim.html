@@ -68,27 +68,31 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <input class="form-control" placeholder="İsim Soyisim" required="" type="text">
+                                    <input id="form-ad" class="form-control" placeholder="İsim Soyisim" required=""
+                                        type="text">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <input class="form-control" placeholder="Mail" required="" type="email">
+                                    <input id="form-mail" class="form-control" placeholder="Mail" required=""
+                                        type="email">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <textarea class="form-control" placeholder="Mesajınızı yazabilirsiniz." required=""
-                                        rows="3"></textarea>
+                                    <textarea id="form-mesaj" class="form-control"
+                                        placeholder="Mesajınızı yazabilirsiniz." required="" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-auto">
-                                        <button class="btn btn-warning" type="button">Temizle</button>
+                                        <button class="btn btn-warning" onclick="temizleForm()"
+                                            type="button">Temizle</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button class="btn btn-warning" type="button">Gönder</button>
+                                        <button class="btn btn-warning" onclick="getMovies()"
+                                            type="button">Gönder</button>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +110,8 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+
 
 </body>
 

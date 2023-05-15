@@ -58,7 +58,7 @@
                 <div class="col-md-12">
                     <div class="section-header text-center pb-5">
                         <h2>İletişim</h2>
-                        <p>İletişim'e Geçin! </p>
+                        <p>İletişim'e Geçin!</p>
                     </div>
                 </div>
             </div>
@@ -74,16 +74,32 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-3">
+                                    <select id="form-soru" class="form-control" required>
+                                        <option value="" disabled selected hidden>Memleketinizi seçebilirsiniz.</option>
+                                        <option value="İstanbul">İstanbul</option>
+                                        <option value="İzmir">İzmir</option>
+                                        <option value="Eskişehir">Eskişehir</option>
+                                        <option value="Ankara">Ankara</option>
+                                        <option value="Edirne">Edirne</option>
+                                        <option value="Balıkesir">Balıkesir</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="mb-3">
                                     <input id="form-mail" class="form-control" placeholder="Mail" required=""
                                         type="email">
                                 </div>
                             </div>
+
                             <div class="col-md-12">
                                 <div class="mb-3">
                                     <textarea id="form-mesaj" class="form-control"
                                         placeholder="Mesajınızı yazabilirsiniz." required="" rows="3"></textarea>
                                 </div>
                             </div>
+
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-auto">
@@ -102,6 +118,7 @@
             </div>
         </div>
     </section>
+
 
     <footer class="bg-dark p-2 text-center">
         <div class="container">

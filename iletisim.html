@@ -11,6 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
 </head>
 
@@ -64,17 +65,17 @@
             </div>
             <div class="row m-0">
                 <div class="col-md-12 p-0 pt-4 pb-4">
-                    <form action="#" class="bg-light p-4 m-auto">
+                    <form action="#" class="bg-light p-4 m-auto" @submit.prevent="formuGonder">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <input id="form-ad" class="form-control" placeholder="İsim Soyisim" required=""
-                                        type="text">
+                                    <input v-model="ad" id="form-ad" class="form-control" placeholder="İsim Soyisim"
+                                        required type="text">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <select id="form-soru" class="form-control" required>
+                                    <select v-model="soru" id="form-soru" class="form-control" required>
                                         <option value="" disabled selected hidden>Memleketinizi seçebilirsiniz.</option>
                                         <option value="İstanbul">İstanbul</option>
                                         <option value="İzmir">İzmir</option>
@@ -88,27 +89,26 @@
 
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <input id="form-mail" class="form-control" placeholder="Mail" required=""
-                                        type="email">
+                                    <input v-model="mail" id="form-mail" class="form-control" placeholder="Mail"
+                                        required type="email">
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <textarea id="form-mesaj" class="form-control"
-                                        placeholder="Mesajınızı yazabilirsiniz." required="" rows="3"></textarea>
+                                    <textarea v-model="mesaj" id="form-mesaj" class="form-control"
+                                        placeholder="Mesajınızı yazabilirsiniz." required rows="3"></textarea>
                                 </div>
                             </div>
 
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-auto">
-                                        <button class="btn btn-warning" onclick="temizleForm()"
-                                            type="button">Temizle</button>
+                                        <button class="btn btn-warning" type="button"
+                                            @click="temizleForm">Temizle</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button class="btn btn-warning" onclick="getMovies()"
-                                            type="button">Gönder</button>
+                                        <button class="btn btn-warning" type="submit">Gönder</button>
                                     </div>
                                 </div>
                             </div>
@@ -128,6 +128,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/iletisimkontrol.js"></script>
 
 
 </body>

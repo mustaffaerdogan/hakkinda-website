@@ -43,3 +43,28 @@ fetch('https://app.sheetlabs.com/RAPI/Top100movieslist')
         console.error('Hata veriler çekilemiyor. :', error);
     });
 
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Formun otomatik gönderilmesini engelle
+
+    // Form verilerini al
+    var ad = document.querySelector('#form-ad').value;
+    var soru = document.querySelector('#form-soru').value;
+    var mail = document.querySelector('#form-mail').value;
+    var mesaj = document.querySelector('#form-mesaj').value;
+
+    // Tabloya verileri ekle
+    var tablo = window.opener.document.querySelector('#hedef-tablo');
+    var satir = tablo.insertRow();
+    var hucre1 = satir.insertCell();
+    hucre1.innerHTML = ad;
+    var hucre2 = satir.insertCell();
+    hucre2.innerHTML = soru;
+    var hucre3 = satir.insertCell();
+    hucre3.innerHTML = mail;
+    var hucre4 = satir.insertCell();
+    hucre4.innerHTML = mesaj;
+
+    // Formu temizle
+    document.querySelector('form').reset();
+});
+

@@ -1,0 +1,24 @@
+html,
+body,
+.intro {
+    height: 100%;
+}
+
+.gradient-custom-1 {
+
+    background: #f2f2f2;
+
+
+}
+
+table td,
+table th {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+tbody td {
+    font-weight: 500;
+    color: #999999;
+}
